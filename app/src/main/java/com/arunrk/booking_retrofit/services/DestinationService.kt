@@ -9,12 +9,9 @@ interface DestinationService {
     @GET("destination")
     fun getDestinationList(): Call<List<Destination>>
 
-    @Headers("x-device-type: Android", "x-foo: bar")
+
     @GET("destination")
-    fun getDestinationList(@QueryMap filter: HashMap<String, String>
-        , @Header("Accept-Language") language: String
-    )
-            : Call<List<Destination>>
+    fun getDestinationList(@QueryMap filter: HashMap<String, String>): Call<List<Destination>>
 
     @GET("destination")
     fun getDestinationList(@Query("country") country: String?

@@ -46,7 +46,10 @@ class DestinationListActivity : AppCompatActivity() {
       //  filter["count"] = "1"
 
         //val requestCall = destinationService.getDestinationList("India", "1")
-        val requestCall = destinationService.getDestinationList(filter, "EN")
+        val requestCall = destinationService.getDestinationList(filter)
+
+//        requestCall.cancel()
+//        requestCall.isCanceled
 
         requestCall.enqueue(object: Callback<List<Destination>> {
 
